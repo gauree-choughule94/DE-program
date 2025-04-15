@@ -1,0 +1,1 @@
+Added queries and output in window.sql file.
