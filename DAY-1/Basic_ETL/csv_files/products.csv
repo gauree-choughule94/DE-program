@@ -1,0 +1,101 @@
+id,user_id,product_category,product_name,quantity
+1,17,Fitness,Stainless Steel Water Bottle,1
+2,49,Food - Dairy,Feta Cheese Crumbles,2
+3,84,Kitchen,Coffee Grinder,3
+4,70,Food - Meats,Savory Breakfast Sausage,4
+5,73,Kitchen,Stainless Steel Cutlery Set,5
+6,28,Clothing - Dresses,Summer Tank Dress,6
+7,53,Food - Meat,Chicken Sausage,7
+8,74,Food - Sides,Creamy Garlic Mashed Potatoes,8
+9,65,Food - Breakfast,Granola,9
+10,27,Home,Bamboo Charcoal Air Purifier Bags,10
+11,86,Food - Meat,Pork Chops,11
+12,64,Food - Produce,Sliced Cucumbers,12
+13,95,Kitchen,Ice Cube Tray with Lid,13
+14,77,Food - Grains,Herb Seasoned Couscous,14
+15,91,Kitchen,Vegetable Spiralizer,15
+16,38,Outdoor,Portable Grill Cover,16
+17,94,Food - Condiments,Vegetarian Stir Fry Sauce,17
+18,80,Food - Snacks,Mango Chia Pudding,18
+19,71,Food - Breakfast,Cranberry Orange Oatmeal,19
+20,13,Food - Grains,Lentils,20
+21,51,Fitness,High-Quality Yoga Mat,21
+22,35,Garden,Herbal Garden Starter Kit,22
+23,83,Art Supplies,Watercolor Brush Pens,23
+24,66,Food - Sides,Mashed Sweet Potatoes,24
+25,25,Outdoor,Premium Flashlight,25
+26,7,Outdoor,Portable Campfire,26
+27,96,Food - Frozen Fruits,Mango Chunks,27
+28,43,Food - Frozen Meals,Asian Stir-Fry Kit,28
+29,90,Food - Dairy,Coconut Chia Pudding,29
+30,32,Electronics,Wireless Keyboard and Mouse Combo,30
+31,52,Office,Sturdy Bookends,31
+32,11,Pets,Cat Tree with Scratching Posts,32
+33,55,Food - Spices,Chili Powder,33
+34,5,Food - Prepared Foods,Chicken Salad Kit,34
+35,67,Travel,Travel Size Toiletry Bottles,35
+36,59,Kitchen,Kitchen Knife Sharpening System,36
+37,34,Computers,Mechanical Keyboard,37
+38,36,Food - Snacks,Caramelized Onion Dip Mix,38
+39,46,Kitchen,Electric Hot Pot,39
+40,79,Food - Breakfast,Toasted Coconut Granola,40
+41,16,Garden,Garden Tool Set with Carrying Bag,41
+42,99,Kitchen,Silicone Cooking Utensils Set,42
+43,45,Food - Snacks,Dark Chocolate Bars,43
+44,88,Food - Breakfast,Banana Nut Oatmeal Cups,44
+45,9,Outdoor,Portable Refrigerator Freezer,45
+46,6,Food - Breakfast,Organic Granola,46
+47,40,Food - Baking Goods,Gluten-Free Pancake Mix,47
+48,18,Food - Baking & Cooking,Coconut Cream,48
+49,12,Food - Bakery,Almond Flour Biscuits,49
+50,37,Automotive,Wireless Car Charger,50
+51,33,Clothing - Pants,Slim Fit Chinos,51
+52,23,Kitchen,Electric Food Slicer,52
+53,3,Pets,Portable Pet Water Bottle,53
+54,54,Crafts,DIY Lip Balm Making Kit,54
+55,93,Food - Produce,Sliced Cucumbers,55
+56,85,Food - Spices,Ground Cinnamon,56
+57,56,Art Supplies,Watercolor Set,57
+58,68,Fitness,Tennis Racket,58
+59,76,Food - Beverages,Apple Juice,59
+60,19,Food - Bakery,Rustic Italian Bread,60
+61,87,Home,Wall Decals for Kids,61
+62,61,Kitchen,Electric Pressure Cooker,62
+63,1,Food - Condiments,Vegan Caesar Dressing,63
+64,81,Electronics,Digital Voice Recorder,64
+65,31,Toys,Children's Science Experiment Lab Kit,65
+66,50,Food - Spices,Savory Italian Herbs,66
+67,75,Food - Grains,Lentils,67
+68,58,Food - Dairy,Garlic Herb Cream Cheese,68
+69,98,Food - Produce,Organic Baby Spinach,69
+70,4,Health,Deep Tissue Massage Gun,70
+71,41,Food - Snacks,Peanut Butter Filled Pretzels,71
+72,22,Food - Snacks,Nut Mix,72
+73,69,Food - Produce,Sweet Cherry Tomatoes,73
+74,60,Electronics,Portable Charger with Solar Panel,74
+75,15,Home,Canvas Wall Art,75
+76,20,Food - Sauces,Vegan Alfredo Sauce,76
+77,82,Pets,Collapsible Pet Dog Bowl,77
+78,26,Books,Kids' Activity Book,78
+79,10,Food - Dairy,Greek Yogurt,79
+80,72,Bathroom,High-Pressure Handheld Shower Head,80
+81,78,Kitchen,Cereal Dispenser with Portion Control,81
+82,39,Home,Electric Blanket,82
+83,14,Food - Snacks,Chocolate Mint Thins,83
+84,24,Food - Snacks,Fruit and Nut Energy Bites,84
+85,62,Food - Prepared Meals,Spicy Tuna Sushi Kit,85
+86,42,Computers,Mechanical Keyboard,86
+87,100,Food - Bakery,Banana Nut Muffins,87
+88,89,Food - Snacks,Spicy Roasted Nuts,88
+89,44,Kitchen,Multi-Cooker,89
+90,47,Food - Frozen Vegetables,Baked Falafel Balls,90
+91,8,Food - Baking Goods,Sweetened Condensed Milk,91
+92,2,Food - Condiments,Salsa Verde,92
+93,97,Food - Dips,Roasted Red Pepper Hummus,93
+94,29,Music,Acoustic Guitar,94
+95,92,Food - Frozen Food,Vegetable Fried Rice Mix,95
+96,63,Toys,Interactive Plush Toy,96
+97,48,Food - Grains,Lentils,97
+98,30,Kitchen,Self-Stirring Mug,98
+99,21,Audio,Portable Speakers,99
+100,57,Food - Vegetables,Marinated Artichokes,100
