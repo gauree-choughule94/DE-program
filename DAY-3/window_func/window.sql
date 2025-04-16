@@ -348,6 +348,7 @@ unbounded following) as 3d_high_sal from employees;
 select department_id, name, salary, nth_value(salary, 2) over (partition by department_id order by salary desc
 rows between unbounded preceding and unbounded following) as second_salary_in_dept from employees;
 
+
 select name, department_id, salary, ntile(4) over (partition by department_id order by salary desc) 
 as salary_quartile from employees;
 
