@@ -42,7 +42,6 @@ as rank1 from employees;
 'Eve', '3', '5800.00', '1'
 'Bolby', '3', '5500.00', '2'
 'Ketki', '3', '4500.00', '3'
-
 """
 
 select name, department_id, salary, rank() over (partition by department_id order by salary desc) 
@@ -61,7 +60,6 @@ as rank_dense from employees;
 'Eve', '3', '5800.00', '1', '1'
 'Bolby', '3', '5500.00', '2', '2'
 'Ketki', '3', '4500.00', '3', '3'
-
 """
 
 select name, department_id, salary, rank() over (order by salary desc) 
@@ -81,7 +79,6 @@ as rank1, dense_rank() over (order by salary desc) as rank_dense from employees;
 'Bob', '1', '5200.00', '10', '9'
 'Alice', '1', '5000.00', '11', '10'
 'Ketki', '3', '4500.00', '12', '11'
-
 """
 
 
@@ -101,7 +98,6 @@ as prev_sal from employees;
 'Jane', '2', '6100.00', '9500.00', '6150.00'
 'SALMAN', '2', '9500.00', '7200.00', '6100.00'
 'ZAYN', '3', '7200.00', NULL, '9500.00'
-
 """
 
 select name, department_id, salary, lead(salary) over(order by salary desc) as next_sal, lag(salary) 
@@ -120,7 +116,6 @@ over(order by salary desc) as prev_sal from employees;
 'Bob', '1', '5200.00', '5000.00', '5500.00'
 'Alice', '1', '5000.00', '4500.00', '5200.00'
 'Ketki', '3', '4500.00', NULL, '5000.00'
-
 """
 
 -- same no difference
@@ -140,7 +135,6 @@ as next_sal, lag(salary, 0) over(order by salary desc) as prev_sal from employee
 'Bob', '1', '5200.00', '5200.00', '5200.00'
 'Alice', '1', '5000.00', '5000.00', '5000.00'
 'Ketki', '3', '4500.00', '4500.00', '4500.00'
-
 """
 
 select name, department_id, salary, lead(salary) over(partition by department_id order by salary desc) 
@@ -160,8 +154,8 @@ as next_sal, lag(salary) over(partition by department_id order by salary desc) a
 'Eve', '3', '5800.00', '5500.00', '7200.00'
 'Bolby', '3', '5500.00', '4500.00', '5800.00'
 'Ketki', '3', '4500.00', NULL, '5500.00'
-
 """
+    
 select name, department_id, salary, lead(salary) over(order by salary desc) 
 as next_sal, lag(salary) over(order by salary desc) as prev_sal from employees;
 
@@ -179,7 +173,6 @@ as next_sal, lag(salary) over(order by salary desc) as prev_sal from employees;
 'Bob', '1', '5200.00', '5000.00', '5500.00'
 'Alice', '1', '5000.00', '4500.00', '5200.00'
 'Ketki', '3', '4500.00', NULL, '5000.00'
-
 """
 
 select name, department_id, salary, lead(salary, 2, 0) over(order by salary desc) 
@@ -198,7 +191,6 @@ as next_sal, lag(salary, 2, 0) over(order by salary desc) as prev_sal from emplo
 'Bob', '1', '5200.00', '4500.00', '5800.00'
 'Alice', '1', '5000.00', '0.00', '5500.00'
 'Ketki', '3', '4500.00', '0.00', '5200.00'
-
 """
 
 select name, department_id, salary, row_number() over() as r_n from employees;
@@ -217,8 +209,8 @@ select name, department_id, salary, row_number() over() as r_n from employees;
 'Jane', '2', '6100.00', '10'
 'SALMAN', '2', '9500.00', '11'
 'ZAYN', '3', '7200.00', '12'
-
 """
+    
 select name, department_id, salary, row_number() over(order by salary) as r_n from employees;
 
 """
@@ -235,8 +227,8 @@ select name, department_id, salary, row_number() over(order by salary) as r_n fr
 'ZAYN', '3', '7200.00', '10'
 'SALMAN', '2', '9500.00', '11'
 'John', '2', '10000.00', '12'
-
 """
+    
 select name, department_id, salary, row_number() over(partition by department_id) as r_n from employees; -- wrong
 
 select top 4 * from employees;     -- sql server only
@@ -258,8 +250,8 @@ select name, department_id, salary, first_value(salary) over(order by salary) as
 'ZAYN', '3', '7200.00', '4500.00'
 'SALMAN', '2', '9500.00', '4500.00'
 'John', '2', '10000.00', '4500.00'
-
 """
+    
 select name, department_id, salary, first_value(salary) over(partition by department_id order by salary) 
 as salryyy from employees;
 
@@ -277,8 +269,8 @@ as salryyy from employees;
 'Bolby', '3', '5500.00', '4500.00'
 'Eve', '3', '5800.00', '4500.00'
 'ZAYN', '3', '7200.00', '4500.00'
-
 """
+    
 select name, department_id, salary, first_value(name) over(order by salary) as first_name from employees;
 """
 # name, department_id, salary, first_name
@@ -294,8 +286,8 @@ select name, department_id, salary, first_value(name) over(order by salary) as f
 'ZAYN', '3', '7200.00', 'Ketki'
 'SALMAN', '2', '9500.00', 'Ketki'
 'John', '2', '10000.00', 'Ketki'
-
 """
+    
 select name, department_id, salary, first_value(department_id) over(order by salary) as dep_id from employees;
 """
 # name, department_id, salary, dep_id
@@ -311,8 +303,8 @@ select name, department_id, salary, first_value(department_id) over(order by sal
 'ZAYN', '3', '7200.00', '3'
 'SALMAN', '2', '9500.00', '3'
 'John', '2', '10000.00', '3'
-
 """
+    
 select name, department_id, salary, last_value(salary) over (partition by department_id 
 order by salary rows between unbounded preceding and unbounded following) as last_val from employees;
 """
@@ -329,8 +321,8 @@ order by salary rows between unbounded preceding and unbounded following) as las
 'Bolby', '3', '5500.00', '7200.00'
 'Eve', '3', '5800.00', '7200.00'
 'ZAYN', '3', '7200.00', '7200.00'
-
 """
+    
 select name, department_id, salary, last_value(salary) over(order by salary rows between unbounded
 preceding and unbounded following) as last_val from employees;
 
@@ -351,7 +343,6 @@ unbounded following) as 3d_high_sal from employees;
 'Bob', '5200.00', '7200.00'
 'Alice', '5000.00', '7200.00'
 'Ketki', '4500.00', '7200.00'
-
 """
 
 select department_id, name, salary, nth_value(salary, 2) over (partition by department_id order by salary desc
@@ -374,7 +365,6 @@ as salary_quartile from employees;
 'Eve', '3', '5800.00', '2'
 'Bolby', '3', '5500.00', '3'
 'Ketki', '3', '4500.00', '4'
-
 """
 
 select name, department_id, salary, sum(salary) over (partition by department_id) as total_dept_salary
@@ -393,7 +383,6 @@ from employees;
 'Bolby', '3', '5500.00', '23000.00'
 'Ketki', '3', '4500.00', '23000.00'
 'ZAYN', '3', '7200.00', '23000.00'
-
 """
 
 select name, department_id, salary, avg(salary) over (partition by department_id) as avg_dept_salary
@@ -412,7 +401,6 @@ from employees;
 'Bolby', '3', '5500.00', '5750.000000'
 'Ketki', '3', '4500.00', '5750.000000'
 'ZAYN', '3', '7200.00', '5750.000000'
-
 """
 
 select name, department_id, salary, round(avg(salary) over (partition by department_id), 2) as avg_dept_salary
@@ -432,7 +420,6 @@ from employees;
 'Bolby', '3', '5500.00', '5750.00'
 'Ketki', '3', '4500.00', '5750.00'
 'ZAYN', '3', '7200.00', '5750.00'
-
 """
 
 select name, department_id, salary, min(salary) over (partition by department_id) as min_dept_salary,
@@ -452,7 +439,6 @@ max(salary) over (partition by department_id) as max_dept_salary from employees;
 'Bolby', '3', '5500.00', '4500.00', '7200.00'
 'Ketki', '3', '4500.00', '4500.00', '7200.00'
 'ZAYN', '3', '7200.00', '4500.00', '7200.00'
-
 """
 
 select name, department_id, salary, count(*) over (partition by department_id) as dept_employee_count
@@ -471,5 +457,4 @@ from employees;
 'Bolby', '3', '5500.00', '4'
 'Ketki', '3', '4500.00', '4'
 'ZAYN', '3', '7200.00', '4'
-
 """
