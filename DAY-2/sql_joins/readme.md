@@ -20,9 +20,6 @@ UNION ALL
 CROSS JOIN	
 SELF JOIN
 
-## main.py is used to create tables.
-## join queries and their respective output added in joins.sql file
-
 Files Overview
 
 - `main.py` – Used to create the necessary tables and insert sample data.
