@@ -47,4 +47,4 @@ The run_sql_script.py performs the following in order:
 
 -Check backup table contents after deletion trigger.
 
-## outputs are added in output.py file
+## outputs are added in output.txt file
