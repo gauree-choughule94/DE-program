@@ -59,7 +59,7 @@ def execute_sql_file(filename):
 def call_stored_procedure():
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.callproc('GetAllEmployees')  # Call SP
+    cursor.callproc('getallemployees')  # Call SP
     
     for result in cursor.stored_results():
         for row in result.fetchall():
@@ -71,7 +71,7 @@ def call_stored_procedure():
 def call_high_sal_stored_procedure():
     conn = get_db_connection()
     cursor = conn.cursor()
-    cursor.callproc('GetHighSalaryEmployees', [7000])  # Call SP
+    cursor.callproc('gethighsalaryemployees', [7000])  # Call SP
     
     for result in cursor.stored_results():
         for row in result.fetchall():
@@ -155,6 +155,36 @@ def execute_transaction_sql_file(filename):
         conn.close()
 
 
+def call_all_employees_with_count():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    args = [0]  # OUT param
+    result_args = cursor.callproc('getallemployees_with_count', args)
+
+    for result in cursor.stored_results():
+        for row in result.fetchall():
+            print(row)
+
+    print("Employee Count:", result_args[0])
+    conn.close()
+
+
+def call_high_sal_with_count():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    args = [7000, 0]  # IN param, OUT param
+    result_args = cursor.callproc('gethighsalaryemployees_with_count', args)
+
+    for result in cursor.stored_results():
+        for row in result.fetchall():
+            print(row)
+
+    print("Employee Count (salary > 7000):", result_args[1])
+    conn.close()
+
+
 if __name__ == "__main__":
     execute_sql_file("db/sp.sql")
     execute_sql_file("db/views.sql")
@@ -169,6 +199,12 @@ if __name__ == "__main__":
 
     print("\nCalling high salary Stored Procedure:")
     call_high_sal_stored_procedure()
+
+    print("\nCalling Stored Procedure with count:")
+    call_all_employees_with_count()
+
+    print("\nCalling high salary Stored Procedure with count:")
+    call_high_sal_with_count()
 
     print("\nQuerying View:")
     query_view()
