@@ -14,4 +14,4 @@ types of loads
 
 ## Practical Session
 
-Worked on the PySpark summary(all operations) in Databricks. The corresponding Jupyter notebook (ipynb) file is not attached as getting timeout error while running.
+Worked on the PySpark summary(all operations) in Databricks. The corresponding Jupyter notebook (ipynb) file is attached.
