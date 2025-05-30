@@ -1,1 +1,0 @@
-Learned Linux commands, file permissions, user management, sudo users, and SSH configuration etc.
