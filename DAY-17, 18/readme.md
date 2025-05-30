@@ -1,0 +1,1 @@
+Vikas Sir conducted the exam on sql, spark, python and practiced the questions that were not covered earlier.
