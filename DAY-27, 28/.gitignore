@@ -1,0 +1,11 @@
+__pycache__/
+.vscode/
+.idea/
+venv/
+.env
+*.env
+*.log
+.cache/
+my_readme.md
+DAY-27, 28/*.tar
+DAY-8/venv/
