@@ -59,3 +59,7 @@ PostgreSQL	- Data Warehouse storing curated analytics data
 PostHog	- Event tracking and product analytics
 Kafka Consumer -	Streams event data to PostHog
 Apache Superset	- BI dashboard and data exploration tool
+
+## Containerization
+
+All services (MySQL, Kafka, Airflow, PySpark, Superset, PostHog, PostgreSQL, etc.) are containerized using Docker, making the setup reproducible and portable.
